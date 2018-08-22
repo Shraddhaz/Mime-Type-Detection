@@ -1,6 +1,6 @@
 # Mime-Type-Detection
 
-Mime-Type-Detection detects the MIME type of a file when user gives any input file. Currently, it is compatible with approximately 750 file extensions.
+Mime-Type-Detection detects the MIME type of a file when user gives any input file. Currently, it is compatible with approximately 750 file types.
 
 ## Approach
 To summarize the approach, the application takes the file as an input and isolates the file extension. Using this extension, it gets the MIME type from a `File Extension to MIME type mapping`.
