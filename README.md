@@ -64,6 +64,3 @@ Deploying this web application on a live system by hosting it on a cloud platfor
 ## Contact and Bug Tracker
 
 If there are any questions regarding the project, you can contact the author at [shrazing29@gmail.com](shrazing29@gmail.com) or post your queries on [https://github.com/Shraddhaz/Mime-Type-Detection/issues](https://github.com/Shraddhaz/Mime-Type-Detection/issues)
-
-## Legal
-
