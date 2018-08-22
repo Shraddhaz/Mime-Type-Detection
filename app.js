@@ -1,8 +1,10 @@
+// Importing modules
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var extToMimeMap = require('./mime-types');
 
+// Setting up Access-Control for server
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
@@ -13,6 +15,12 @@ app.use(function (req, res, next) {
     next();
 });
 
+/* 
+    Handling POST request to root to fetch the MIME type
+    The request contains the file name. We isolate the file extension from the file name
+    and get the MIME type from the FileExtension => MimeType mapping 
+    created in mime-types.js
+*/
 app.post('/', function(req,res) {
     res.writeHead(200, { 'Content-Type' : 'application/json' });
     const fileNameArr = req.body.name.split('.');
@@ -24,6 +32,7 @@ app.post('/', function(req,res) {
         res.end(Error('File extension not found in map'));
 });
 
+// Creating server that listens for connection on port 8080
 app.listen(8080, function () {
     console.log("Server running on:", 8080);
 });

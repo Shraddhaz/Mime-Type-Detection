@@ -1,6 +1,7 @@
-// List found using the linux command 
+/* List found using the linux command 
 //`wget -qO- http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types | egrep -v ^# | awk '{ for (i=2; i<=NF; i++) {print $i" "$1}}' | sort`;
-
+// Command found from stackoverflow.com. Created the mapping in this file.
+*/
 var extToMimeMap = {
     "123":"application/vnd.lotus-1-2-3",
     "3dml":"text/vnd.in3d.3dml",

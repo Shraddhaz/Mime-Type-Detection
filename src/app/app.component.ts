@@ -9,13 +9,19 @@ import { AppService } from './app.service';
 })
 
 export class AppComponent {
+
+  // Creating initial component variables
+  @ViewChild("fileInput") fileInput;
   title = 'Mime-Type-Detection';
   mimeTypeOfFile: string;
 
   constructor(private appService: AppService) { }
 
-  @ViewChild("fileInput") fileInput;
-  onFormSubmit() {
+  /*
+  onFileSubmit makes a POST call to the server with the file
+  in payload and fetches the MIME type of that file
+  */
+  onFileSubmit() {
     this.resetComponentValue();
     const fileInputElement = this.fileInput.nativeElement;
     if(fileInputElement.files && fileInputElement.files[0]){
@@ -28,6 +34,7 @@ export class AppComponent {
     }
   }
 
+  // Resets the variable to empty string
   resetComponentValue(): any {
     this.mimeTypeOfFile='';
   }
