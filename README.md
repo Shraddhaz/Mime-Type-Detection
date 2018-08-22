@@ -31,7 +31,7 @@ npm install --save
 node app.js
 ```
 
-5. Create new terminal and change directory to  ```/Mime-Type-Detection```
+5. Open new terminal and change directory to  ```/Mime-Type-Detection```
 
 6. Start the client
 ```
