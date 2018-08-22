@@ -5,7 +5,6 @@ var extToMimeMap = require('./mime-types');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.setHeader("Access-Control-Allow-Credentials", "true");
@@ -25,6 +24,6 @@ app.post('/', function(req,res) {
         res.end(Error('File extension not found in map'));
 });
 
-app.listen(process.env.PORT || 8080, function () {
+app.listen(8080, function () {
     console.log("Server running on:", 8080);
 });

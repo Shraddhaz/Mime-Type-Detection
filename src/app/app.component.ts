@@ -10,29 +10,26 @@ import { AppService } from './app.service';
 
 export class AppComponent {
   title = 'Mime-Type-Detection';
-  mimeTypeFromImage: string;
-  mimeTypeFromServer: string;
+  mimeTypeOfFile: string;
 
-  constructor(private appService: AppService) {  }
+  constructor(private appService: AppService) { }
 
   @ViewChild("fileInput") fileInput;
   onFormSubmit() {
-    this.resetComponentValues();
+    this.resetComponentValue();
     const fileInputElement = this.fileInput.nativeElement;
     if(fileInputElement.files && fileInputElement.files[0]){
       const inputFile = fileInputElement.files[0];
-      this.mimeTypeFromImage = inputFile.type ? inputFile.type : 'File corrupt or has no extension';
       this.appService.getMimeType(inputFile.name)
-        .subscribe(
-          (mimeType) => this.mimeTypeFromServer = mimeType.text(),
-          () => this.mimeTypeFromServer = 'File corrupt or has no extension',
-        );
+      .subscribe(
+        (mimeType) => this.mimeTypeOfFile = mimeType.text(),
+        () => this.mimeTypeOfFile = 'File corrupt or has no extension',
+      );
     }
   }
 
-  resetComponentValues(): any {
-    this.mimeTypeFromImage='';
-    this.mimeTypeFromServer='';
+  resetComponentValue(): any {
+    this.mimeTypeOfFile='';
   }
 
 }

@@ -11,7 +11,7 @@ body {
 }
 
 .content {
-    background: linear-gradient(45deg,#ff91e4, #fdae89);
+    background: linear-gradient(45deg,#ff75dc, #fdae89);
     padding: 40px;
     box-shadow: 1px 1px 50px #282068cc;
 }
