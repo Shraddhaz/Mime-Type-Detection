@@ -29,7 +29,7 @@ export class AppComponent {
       this.appService.getMimeType(inputFile.name)
       .subscribe(
         (mimeType) => this.mimeTypeOfFile = mimeType.text(),
-        () => this.mimeTypeOfFile = 'File corrupt or has no extension',
+        () => this.mimeTypeOfFile = 'MIME type not found (File corrupt / no extension)',
       );
     }
   }
