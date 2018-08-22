@@ -6,7 +6,7 @@ Mime-Type-Detection detects the MIME type of a file when user gives any input fi
 To summarize the approach, the application takes the file as an input and isolates the file extension. Using this extension, it gets the MIME type from a `File Extension to MIME type mapping`.
 
 ## Design
-The client is in Angular framework while the server is in Node/Express framework. On uploading the file, the Angular app service sends an HTTP POST request to the server. The server then handles finding the file extension and returns with the MIME type found from the `mime-type.js` object. If the extension is not present in the mapping, it returns an error.
+The client is in Angular framework while the server is in Node/Express framework. On uploading the file, the Angular app service sends an HTTP POST request to the server. The server then handles finding the file extension and returns with the MIME type found from the `mime-type.js` object. If the file extension is not present, server returns an error.
 
 
 ## Installation and Execution
