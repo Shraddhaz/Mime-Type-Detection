@@ -50,7 +50,7 @@ npm start
 * [Node.js](https://nodejs.org/en/) - Back-End 
 * [Express](https://expressjs.com/) - Back-End 
 * [Visual Studio Code](https://www.jetbrains.com/idea/) - Platform used
-* [Mime Type List](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types) - Mime Type List
+* [Mime Type List](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types) - http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
 
 
 ## Future Scope
