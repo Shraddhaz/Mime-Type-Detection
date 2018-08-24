@@ -28,7 +28,7 @@ npm install --save
 
 4. Start the server
 ```
-node app.js
+node server/app.js
 ```
 
 5. Open new terminal and change directory to  ```/Mime-Type-Detection```
